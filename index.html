@@ -1,1 +1,310 @@
-Hello world!
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#faf8f5; -webkit-font-smoothing:antialiased; }
+  a { color:#5c3a91; text-decoration:none; border-bottom:1px solid rgba(92,58,145,0.28); }
+  a:hover { color:#3f2666; border-bottom-color:#3f2666; }
+</style>
+</helmet>
+<div style="font-family:'IBM Plex Sans',system-ui,sans-serif; color:#1c1a17; background:#faf8f5;">
+
+  <div style="background:#241f2e; color:#efeaf6; padding:14px 0;">
+    <div style="max-width:1080px; margin:0 auto; padding:0 32px; display:flex; flex-wrap:wrap; gap:16px; justify-content:space-between; align-items:center; font-family:'IBM Plex Mono',monospace; font-size:12.5px; letter-spacing:0.08em; text-transform:uppercase;">
+      <span>Spelman College &nbsp;·&nbsp; Federal Reserve Bank of Atlanta</span>
+      <span style="color:#b9a9d6;">Fall 2026</span>
+    </div>
+  </div>
+
+  <header style="max-width:1080px; margin:0 auto; padding:64px 32px 40px;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:14px; letter-spacing:0.16em; color:#5c3a91; margin-bottom:18px;">ECON 345</div>
+    <h1 style="font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:clamp(38px,5.6vw,64px); line-height:1.04; letter-spacing:-0.02em; margin:0 0 20px; max-width:16ch; text-wrap:balance;">Exploratory Data Analysis with R</h1>
+    <p style="margin:0; max-width:62ch; font-size:19px; line-height:1.6; color:#4a443c; text-wrap:pretty;">A hands-on course in data preparation, analysis, and communication, taught by analysts, research assistants, and economists from the Federal Reserve Bank of Atlanta.</p>
+  </header>
+
+  <figure style="max-width:1080px; margin:0 auto 72px; padding:0 32px;">
+    <div style="overflow:hidden; border-radius:3px; background:#e8e2d9;">
+      <img src="images/bostic-fall2025.jpg" alt="Atlanta Fed President Raphael Bostic with ECON345 students, Fall 2025" style="display:block; width:100%; height:auto;">
+    </div>
+    <figcaption style="margin-top:14px; font-size:14.5px; line-height:1.55; color:#6b6459; max-width:70ch;">Atlanta Fed President Raphael Bostic with the Fall 2025 ECON345 class.</figcaption>
+  </figure>
+
+  <section style="max-width:1080px; margin:0 auto; padding:0 32px 72px;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1px; background:transparent;">
+      <div style="background:#faf8f5; padding:26px 24px; box-shadow:0 0 0 1px #e2dbd0;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.12em; text-transform:uppercase; color:#8a8175; margin-bottom:10px;">Lectures</div>
+        <div style="font-size:17px; line-height:1.5; font-weight:500;">Fridays, 9:00am – 12:00pm</div>
+      </div>
+      <div style="background:#faf8f5; padding:26px 24px; box-shadow:0 0 0 1px #e2dbd0;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.12em; text-transform:uppercase; color:#8a8175; margin-bottom:10px;">Location</div>
+        <div style="font-size:17px; line-height:1.5; font-weight:500;">9th floor seminar room, Federal Reserve Bank of Atlanta — 10th &amp; Peachtree, Midtown</div>
+      </div>
+      <div style="background:#faf8f5; padding:26px 24px; box-shadow:0 0 0 1px #e2dbd0;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.12em; text-transform:uppercase; color:#8a8175; margin-bottom:10px;">Course email</div>
+        <div style="font-size:17px; line-height:1.5; font-weight:500;"><a href="mailto:econ345.spelman@gmail.com">econ345.spelman@gmail.com</a></div>
+      </div>
+      <div style="background:#faf8f5; padding:26px 24px; box-shadow:0 0 0 1px #e2dbd0;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.12em; text-transform:uppercase; color:#8a8175; margin-bottom:10px;">Office hours</div>
+        <div style="font-size:17px; line-height:1.5; font-weight:500;">Zoom — times TBD from the class questionnaire. Also by appointment (one day's notice).</div>
+      </div>
+    </div>
+    <p style="margin:20px 0 0; font-size:15.5px; line-height:1.65; color:#6b6459; max-width:78ch; text-wrap:pretty;">Entering the bank requires passing through security, which can take five to ten minutes. Plan to arrive well before 9am so you can reach the seminar room, connect to wifi, and load Canvas and RStudio before the quiz begins.</p>
+  </section>
+
+  <section style="background:#f2eee8; border-top:1px solid #e2dbd0; border-bottom:1px solid #e2dbd0;">
+    <div style="max-width:1080px; margin:0 auto; padding:72px 32px; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:48px;">
+      <div>
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:28px; letter-spacing:-0.01em; margin:0 0 18px;">Course staff</h2>
+        <p style="margin:0 0 16px; font-size:16.5px; line-height:1.65; color:#3d382f; text-wrap:pretty;">The instructor of record is <strong style="font-weight:600;">Mark Jensen</strong>, an economist at the Federal Reserve Bank of Atlanta. The course is an initiative of the Atlanta Fed and is organized and taught by a group of analysts, research assistants, and economists. We prefer to be called by our first names.</p>
+        <p style="margin:0 0 16px; font-size:16.5px; line-height:1.65; color:#3d382f; text-wrap:pretty;">For official excuses, homework or project questions, or general course inquiries, email <a href="mailto:econ345.spelman@gmail.com">econ345.spelman@gmail.com</a>. A number of course leaders maintain this address and check it periodically during business hours.</p>
+        <p style="margin:0; font-size:16.5px; line-height:1.65; color:#3d382f; text-wrap:pretty;">For anything private, sensitive, time-critical, or confidential, email Mark directly at <a href="mailto:Mark.Jensen@atl.frb.org">Mark.Jensen@atl.frb.org</a>. Atlanta Fed staff respond during business hours, Monday to Friday, 9am to 5pm.</p>
+      </div>
+      <div>
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:28px; letter-spacing:-0.01em; margin:0 0 18px;">What you'll learn</h2>
+        <p style="margin:0 0 18px; font-size:16.5px; line-height:1.65; color:#3d382f; text-wrap:pretty;">The course gives you the foundational data preparation and analysis skills needed to perform or support research in economics, finance, and related fields, using R.</p>
+        <ul style="margin:0; padding-left:20px; display:grid; gap:9px; font-size:16.5px; line-height:1.55; color:#3d382f;">
+          <li>Reading, cleaning, and merging data sets</li>
+          <li>Identifying and handling outliers and other data issues</li>
+          <li>Creating tables and charts to summarize data</li>
+          <li>Analyzing and communicating relationships between variables</li>
+          <li>How economic and statistical tools support descriptive analysis</li>
+        </ul>
+        <p style="margin:18px 0 0; font-size:15.5px; line-height:1.6; color:#6b6459;"><strong style="font-weight:600; color:#3d382f;">Prerequisite:</strong> Econ 303 Econometrics with a grade of B or higher. No prior programming or data science training required.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="materials" style="max-width:1080px; margin:0 auto; padding:80px 32px;">
+    <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:34px; letter-spacing:-0.015em; margin:0 0 10px;">Class materials</h2>
+    <p style="margin:0 0 34px; font-size:16.5px; line-height:1.6; color:#6b6459; max-width:70ch; text-wrap:pretty;">Slides, homework, data, and the R submission template for each lecture. Assignments are still submitted through Canvas.</p>
+
+    <article style="border:1px solid #e2dbd0; background:#fff;">
+      <div style="display:flex; flex-wrap:wrap; gap:16px; justify-content:space-between; align-items:baseline; padding:24px 28px; border-bottom:1px solid #ede7de;">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.12em; text-transform:uppercase; color:#5c3a91; margin-bottom:8px;">Lecture 01 &nbsp;·&nbsp; Aug 28</div>
+          <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:23px; margin:0;">Introduction, Posit Cloud setup &amp; R basics</h3>
+        </div>
+        <div style="font-size:14.5px; color:#8a8175;">HW #1 due Sep 3</div>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
+        <a href="https://raw.githubusercontent.com/briansrobertson/ECON345/main/class_materials/lecture_01/Lecture%201%20-%20Introduction%20to%20R.pdf" download="Lecture 1 - Introduction to R.pdf" style="border-bottom:none; display:block; padding:22px 28px; border-right:1px solid #ede7de;" style-hover="background:#f7f3fb;">
+          <div style="font-size:16.5px; font-weight:600; color:#1c1a17; margin-bottom:6px;">Slides</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:#8a8175;">Lecture 1 - Introduction to R.pdf</div>
+        </a>
+        <a href="https://raw.githubusercontent.com/briansrobertson/ECON345/main/class_materials/lecture_01/homework.pdf" download="econ345_hw01.pdf" style="border-bottom:none; display:block; padding:22px 28px; border-right:1px solid #ede7de;" style-hover="background:#f7f3fb;">
+          <div style="font-size:16.5px; font-weight:600; color:#1c1a17; margin-bottom:6px;">Homework</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:#8a8175;">homework.pdf</div>
+        </a>
+        <a href="https://raw.githubusercontent.com/briansrobertson/ECON345/main/class_materials/lecture_01/decade_pop.csv" download="decade_pop.csv" style="border-bottom:none; display:block; padding:22px 28px; border-right:1px solid #ede7de;" style-hover="background:#f7f3fb;">
+          <div style="font-size:16.5px; font-weight:600; color:#1c1a17; margin-bottom:6px;">Data</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:#8a8175;">decade_pop.csv</div>
+        </a>
+        <a href="https://raw.githubusercontent.com/briansrobertson/ECON345/main/class_materials/lecture_01/homework_script.R" download="homework_script.R" style="border-bottom:none; display:block; padding:22px 28px;" style-hover="background:#f7f3fb;">
+          <div style="font-size:16.5px; font-weight:600; color:#1c1a17; margin-bottom:6px;">R template</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:#8a8175;">homework_script.R</div>
+        </a>
+      </div>
+    </article>
+
+    <div style="margin-top:20px; padding:22px 28px; border:1px dashed #d8d0c4; font-size:15.5px; line-height:1.6; color:#8a8175;">Later lectures will appear here as they are posted.</div>
+  </section>
+
+  <sc-if value="{{ showSchedule }}" hint-placeholder-val="{{ true }}">
+  <section style="background:#241f2e; color:#e9e4f0;">
+    <div style="max-width:1080px; margin:0 auto; padding:80px 32px;">
+      <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:34px; letter-spacing:-0.015em; margin:0 0 10px; color:#fff;">Tentative schedule</h2>
+      <p style="margin:0 0 34px; font-size:16.5px; line-height:1.6; color:#b9a9d6; max-width:70ch;">See Canvas for the updated schedule and assigned readings and videos.</p>
+
+      <div style="display:grid; grid-template-columns:100px 1fr 1fr; gap:0; font-size:16px;">
+        <div style="grid-column:1/-1; font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:#8f7fb0; padding:0 0 14px; border-bottom:1px solid #3d3550; display:grid; grid-template-columns:100px 1fr 1fr;"><span>Date</span><span>Topic</span><span>Homework</span></div>
+
+        <div style="grid-column:1/-1; padding:26px 0 10px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:#c9a8ff;">Module 1 — Fundamentals of data processing</div>
+
+        <div style="padding:14px 0; border-top:1px solid #3d3550; color:#b9a9d6; font-family:'IBM Plex Mono',monospace; font-size:14px;">8/21</div>
+        <div style="padding:14px 16px 14px 0; border-top:1px solid #3d3550; color:#8f7fb0; font-style:italic;">No class</div>
+        <div style="padding:14px 0; border-top:1px solid #3d3550;"></div>
+
+        <div style="padding:14px 0; border-top:1px solid #3d3550; color:#b9a9d6; font-family:'IBM Plex Mono',monospace; font-size:14px;">8/28</div>
+        <div style="padding:14px 16px 14px 0; border-top:1px solid #3d3550;">Introduction, Posit Cloud setup &amp; R basics</div>
+        <div style="padding:14px 0; border-top:1px solid #3d3550; color:#b9a9d6;">HW #1 — due 9/3</div>
+
+        <div style="padding:14px 0; border-top:1px solid #3d3550; color:#b9a9d6; font-family:'IBM Plex Mono',monospace; font-size:14px;">9/4</div>
+        <div style="padding:14px 16px 14px 0; border-top:1px solid #3d3550;">Data manipulation and the tidyverse</div>
+        <div style="padding:14px 0; border-top:1px solid #3d3550; color:#b9a9d6;">HW #2 — due 9/10</div>
+
+        <div style="padding:14px 0; border-top:1px solid #3d3550; color:#b9a9d6; font-family:'IBM Plex Mono',monospace; font-size:14px;">9/11</div>
+        <div style="padding:14px 16px 14px 0; border-top:1px solid #3d3550;">Summary statistics; starting the project</div>
+        <div style="padding:14px 0; border-top:1px solid #3d3550; color:#b9a9d6;">HW #3 — due 9/17<br>Project update #1 — due 9/19</div>
+
+        <div style="padding:14px 0; border-top:1px solid #3d3550; color:#b9a9d6; font-family:'IBM Plex Mono',monospace; font-size:14px;">9/18</div>
+        <div style="padding:14px 16px 14px 0; border-top:1px solid #3d3550;">Code hygiene; R Markdown</div>
+        <div style="padding:14px 0; border-top:1px solid #3d3550; color:#b9a9d6;">HW #4 — due 9/24<br>Project update #2 — due 9/26</div>
+
+        <div style="grid-column:1/-1; padding:30px 0 10px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:#c9a8ff;">Module 2 — Analyzing relationships between variables</div>
+
+        <div style="padding:14px 0; border-top:1px solid #3d3550; color:#b9a9d6; font-family:'IBM Plex Mono',monospace; font-size:14px;">9/25</div>
+        <div style="padding:14px 16px 14px 0; border-top:1px solid #3d3550;">Plots; dates and strings; tidyverse review. Research process; project discussion</div>
+        <div style="padding:14px 0; border-top:1px solid #3d3550; color:#b9a9d6;">HW #5 — due 10/1<br>Project update #3 — due 10/3</div>
+
+        <div style="padding:14px 0; border-top:1px solid #3d3550; color:#b9a9d6; font-family:'IBM Plex Mono',monospace; font-size:14px;">10/2</div>
+        <div style="padding:14px 16px 14px 0; border-top:1px solid #3d3550;">Hypothesis testing &amp; correlation</div>
+        <div style="padding:14px 0; border-top:1px solid #3d3550; color:#b9a9d6;">HW #6 — due 10/8<br>Project update #4 — due 10/10</div>
+
+        <div style="padding:14px 0; border-top:1px solid #3d3550; color:#b9a9d6; font-family:'IBM Plex Mono',monospace; font-size:14px;">10/9</div>
+        <div style="padding:14px 16px 14px 0; border-top:1px solid #3d3550;">Loops; debugging; project discussion</div>
+        <div style="padding:14px 0; border-top:1px solid #3d3550; color:#b9a9d6;">HW #7 — due 10/15<br>Project update #5 — due 10/17</div>
+
+        <div style="grid-column:1/-1; padding:30px 0 10px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:#c9a8ff;">Module 3 — Advanced topics in data analysis</div>
+
+        <div style="padding:14px 0; border-top:1px solid #3d3550; color:#b9a9d6; font-family:'IBM Plex Mono',monospace; font-size:14px;">10/16</div>
+        <div style="padding:14px 16px 14px 0; border-top:1px solid #3d3550; color:#8f7fb0; font-style:italic;">No class — Homecoming</div>
+        <div style="padding:14px 0; border-top:1px solid #3d3550;"></div>
+
+        <div style="padding:14px 0; border-top:1px solid #3d3550; color:#b9a9d6; font-family:'IBM Plex Mono',monospace; font-size:14px;">10/23</div>
+        <div style="padding:14px 16px 14px 0; border-top:1px solid #3d3550;">Advanced plots; Regression I</div>
+        <div style="padding:14px 0; border-top:1px solid #3d3550; color:#b9a9d6;">HW #8 — due 10/29<br>Project update #6 — due 10/31</div>
+
+        <div style="padding:14px 0; border-top:1px solid #3d3550; color:#b9a9d6; font-family:'IBM Plex Mono',monospace; font-size:14px;">10/30</div>
+        <div style="padding:14px 16px 14px 0; border-top:1px solid #3d3550;">Regression II &amp; III; project discussion</div>
+        <div style="padding:14px 0; border-top:1px solid #3d3550; color:#b9a9d6;">HW #9 — due 11/5</div>
+
+        <div style="padding:14px 0; border-top:1px solid #3d3550; color:#b9a9d6; font-family:'IBM Plex Mono',monospace; font-size:14px;">11/6</div>
+        <div style="padding:14px 16px 14px 0; border-top:1px solid #3d3550;">Coding review; functional programming</div>
+        <div style="padding:14px 0; border-top:1px solid #3d3550;"></div>
+
+        <div style="padding:14px 0; border-top:1px solid #3d3550; color:#b9a9d6; font-family:'IBM Plex Mono',monospace; font-size:14px;">11/13</div>
+        <div style="padding:14px 16px 14px 0; border-top:1px solid #3d3550;">Correlation vs. causation</div>
+        <div style="padding:14px 0; border-top:1px solid #3d3550; color:#b9a9d6;">First draft of project due by 9am</div>
+
+        <div style="padding:14px 0; border-top:1px solid #3d3550; color:#b9a9d6; font-family:'IBM Plex Mono',monospace; font-size:14px;">11/20</div>
+        <div style="padding:14px 16px 14px 0; border-top:1px solid #3d3550;">Project presentations</div>
+        <div style="padding:14px 0; border-top:1px solid #3d3550;"></div>
+
+        <div style="padding:14px 0; border-top:1px solid #3d3550; color:#b9a9d6; font-family:'IBM Plex Mono',monospace; font-size:14px;">11/27</div>
+        <div style="padding:14px 16px 14px 0; border-top:1px solid #3d3550; color:#8f7fb0; font-style:italic;">No class — Thanksgiving break</div>
+        <div style="padding:14px 0; border-top:1px solid #3d3550;"></div>
+
+        <div style="padding:14px 0; border-top:1px solid #3d3550; border-bottom:1px solid #3d3550; color:#b9a9d6; font-family:'IBM Plex Mono',monospace; font-size:14px;">12/11</div>
+        <div style="padding:14px 16px 14px 0; border-top:1px solid #3d3550; border-bottom:1px solid #3d3550;">Final version of project paper due by 9am</div>
+        <div style="padding:14px 0; border-top:1px solid #3d3550; border-bottom:1px solid #3d3550;"></div>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <section style="max-width:1080px; margin:0 auto; padding:80px 32px 0;">
+    <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:34px; letter-spacing:-0.015em; margin:0 0 34px;">Grading</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:28px;">
+      <div style="border-top:2px solid #5c3a91; padding-top:18px;">
+        <div style="font-family:'Source Serif 4',Georgia,serif; font-size:38px; font-weight:600; line-height:1; margin-bottom:10px;">65%</div>
+        <div style="font-size:17px; font-weight:600; margin-bottom:8px;">Final project</div>
+        <p style="margin:0; font-size:15.5px; line-height:1.6; color:#6b6459; text-wrap:pretty;">Rough draft, in-class presentation, and final paper (45%), plus six graded project updates (20%). Students work with an Atlanta Fed economist mentor and a project buddy. Without the final project a student will not pass the course.</p>
+      </div>
+      <div style="border-top:2px solid #e2dbd0; padding-top:18px;">
+        <div style="font-family:'Source Serif 4',Georgia,serif; font-size:38px; font-weight:600; line-height:1; margin-bottom:10px;">20%</div>
+        <div style="font-size:17px; font-weight:600; margin-bottom:8px;">Weekly homework</div>
+        <p style="margin:0; font-size:15.5px; line-height:1.6; color:#6b6459; text-wrap:pretty;">Posted to Canvas, generally due Thursday nights by midnight. Lecture homework and project homework are often due at the same time, so check the schedule carefully. If you turn in every homework reasonably completed, your lowest grade is dropped.</p>
+      </div>
+      <div style="border-top:2px solid #e2dbd0; padding-top:18px;">
+        <div style="font-family:'Source Serif 4',Georgia,serif; font-size:38px; font-weight:600; line-height:1; margin-bottom:10px;">10%</div>
+        <div style="font-size:17px; font-weight:600; margin-bottom:8px;">Quizzes &amp; attendance</div>
+        <p style="margin:0; font-size:15.5px; line-height:1.6; color:#6b6459; text-wrap:pretty;">A short quiz starts every class, 9:00 to 9:10am sharp. Unexcused absence or lateness earns a zero with no make-up, though your lowest quiz is dropped. A shorter, ungraded exit ticket closes each class.</p>
+      </div>
+      <div style="border-top:2px solid #e2dbd0; padding-top:18px;">
+        <div style="font-family:'Source Serif 4',Georgia,serif; font-size:38px; font-weight:600; line-height:1; margin-bottom:10px;">5%</div>
+        <div style="font-size:17px; font-weight:600; margin-bottom:8px;">Communication &amp; professionalism</div>
+        <p style="margin:0; font-size:15.5px; line-height:1.6; color:#6b6459; text-wrap:pretty;">Coming prepared to class and to meetings with your project buddy and mentor, giving one to two business days' notice when scheduling or canceling, and using respectful, professional language with course staff.</p>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{ showPolicies }}" hint-placeholder-val="{{ true }}">
+  <section style="max-width:1080px; margin:0 auto; padding:72px 32px 80px;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:44px;">
+      <div>
+        <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:24px; margin:0 0 14px;">Late and incomplete policy</h3>
+        <p style="margin:0 0 14px; font-size:16px; line-height:1.65; color:#3d382f; text-wrap:pretty;">Late submissions are reduced by 2 percentage points for every partial hour late. An assignment earning 85% submitted 2 hours and 20 minutes late receives a 6 point deduction, for a final score of 79%.</p>
+        <p style="margin:0; font-size:16px; line-height:1.65; color:#3d382f; text-wrap:pretty;">Because the research project relies on the generosity and time of mentors and project buddies, Incompletes are not granted. A letter grade is assigned at the end of the semester regardless of circumstances.</p>
+      </div>
+      <div>
+        <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:24px; margin:0 0 14px;">Absences</h3>
+        <p style="margin:0 0 14px; font-size:16px; line-height:1.65; color:#3d382f; text-wrap:pretty;">Request an excused absence in advance by emailing <a href="mailto:econ345.spelman@gmail.com">econ345.spelman@gmail.com</a>. You are responsible for taking the make-up quiz within seven days of the missed class, normally during office hours.</p>
+        <p style="margin:0; font-size:16px; line-height:1.65; color:#3d382f; text-wrap:pretty;">Even if your absence is unexcused, let us know you will miss class so we are not waiting for you at the security entrance.</p>
+      </div>
+      <div>
+        <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:24px; margin:0 0 14px;">Academic integrity</h3>
+        <p style="margin:0 0 14px; font-size:16px; line-height:1.65; color:#3d382f; text-wrap:pretty;">Per the <a href="https://www.spelman.edu/docs/deans/academic-integrity-policy.pdf">Spelman College Academic Integrity Policy</a>, you may work collaboratively but each person writes up their own solutions. Think and work through every question together; do not divide and conquer.</p>
+        <p style="margin:0; font-size:16px; line-height:1.65; color:#3d382f; text-wrap:pretty;">Cite all sources on your project, and write everything in your own words, even a summary of another paper.</p>
+      </div>
+      <div>
+        <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:24px; margin:0 0 14px;">How much work to expect</h3>
+        <p style="margin:0 0 14px; font-size:16px; line-height:1.65; color:#3d382f; text-wrap:pretty;">Plan on an hour outside class for every hour in lecture: roughly three hours a week studying, reviewing, and attending office hours.</p>
+        <p style="margin:0; font-size:16px; line-height:1.65; color:#3d382f; text-wrap:pretty;">Turning in homework late during the first three weeks, or missing two of the first five classes, will seriously jeopardize your ability to pass the class.</p>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <section style="background:#f2eee8; border-top:1px solid #e2dbd0;">
+    <div style="max-width:1080px; margin:0 auto; padding:80px 32px;">
+      <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:34px; letter-spacing:-0.015em; margin:0 0 10px;">Resources</h2>
+      <p style="margin:0 0 34px; font-size:16.5px; line-height:1.6; color:#6b6459; max-width:70ch;">Canvas is the primary source for information: announcements, readings, grades, and submissions.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1px; background:transparent;">
+        <a href="https://canvas.instructure.com/courses/6006441" style="border-bottom:none; display:block; background:#faf8f5; padding:26px 24px; box-shadow:0 0 0 1px #e2dbd0;" style-hover="background:#fff;">
+          <div style="font-size:18px; font-weight:600; color:#1c1a17; margin-bottom:8px;">Canvas</div>
+          <div style="font-size:15px; line-height:1.55; color:#6b6459;">Announcements, slides, homework, handouts, grades, and the discussion boards.</div>
+        </a>
+        <a href="https://posit.cloud/spaces/162319/" style="border-bottom:none; display:block; background:#faf8f5; padding:26px 24px; box-shadow:0 0 0 1px #e2dbd0;" style-hover="background:#fff;">
+          <div style="font-size:18px; font-weight:600; color:#1c1a17; margin-bottom:8px;">Posit Cloud</div>
+          <div style="font-size:15px; line-height:1.55; color:#6b6459;">Browser-based RStudio. Nothing to install; join through the invitation email.</div>
+        </a>
+        <a href="https://r4ds.had.co.nz" style="border-bottom:none; display:block; background:#faf8f5; padding:26px 24px; box-shadow:0 0 0 1px #e2dbd0;" style-hover="background:#fff;">
+          <div style="font-size:18px; font-weight:600; color:#1c1a17; margin-bottom:8px;">R for Data Science</div>
+          <div style="font-size:15px; line-height:1.55; color:#6b6459;">Required text by Grolemund and Wickham, free online.</div>
+        </a>
+        <a href="https://posit.co/resources/cheatsheets/" style="border-bottom:none; display:block; background:#faf8f5; padding:26px 24px; box-shadow:0 0 0 1px #e2dbd0;" style-hover="background:#fff;">
+          <div style="font-size:18px; font-weight:600; color:#1c1a17; margin-bottom:8px;">Posit cheatsheets</div>
+          <div style="font-size:15px; line-height:1.55; color:#6b6459;">Quick reference for readr, dplyr, ggplot2, and the rest of the tidyverse.</div>
+        </a>
+        <a href="https://canvas.instructure.com/courses/6006441/discussion_topics" style="border-bottom:none; display:block; background:#faf8f5; padding:26px 24px; box-shadow:0 0 0 1px #e2dbd0;" style-hover="background:#fff;">
+          <div style="font-size:18px; font-weight:600; color:#1c1a17; margin-bottom:8px;">Ask a TA</div>
+          <div style="font-size:15px; line-height:1.55; color:#6b6459;">Post your question on the Canvas discussion boards.</div>
+        </a>
+        <a href="https://github.com/briansrobertson/ECON345" style="border-bottom:none; display:block; background:#faf8f5; padding:26px 24px; box-shadow:0 0 0 1px #e2dbd0;" style-hover="background:#fff;">
+          <div style="font-size:18px; font-weight:600; color:#1c1a17; margin-bottom:8px;">Course repository</div>
+          <div style="font-size:15px; line-height:1.55; color:#6b6459;">Source files and every class material posted so far.</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#241f2e; color:#b9a9d6;">
+    <div style="max-width:1080px; margin:0 auto; padding:44px 32px; display:flex; flex-wrap:wrap; gap:18px; justify-content:space-between; align-items:baseline; font-size:14.5px;">
+      <span>ECON 345 &nbsp;·&nbsp; Exploratory Data Analysis with R &nbsp;·&nbsp; Fall 2026</span>
+      <span>Questions? <a href="mailto:econ345.spelman@gmail.com" style="color:#e9e4f0; border-bottom-color:rgba(233,228,240,0.4);">econ345.spelman@gmail.com</a></span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showSchedule&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;showPolicies&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showSchedule: this.props.showSchedule ?? true,
+      showPolicies: this.props.showPolicies ?? true
+    };
+  }
+}
+</script>
+</body>
+</html>
