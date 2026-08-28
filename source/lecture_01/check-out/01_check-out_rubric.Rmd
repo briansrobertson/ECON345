@@ -1,0 +1,23 @@
+---
+title: "Check-out 1"
+subtitle: "ECON 181 / ECOG 315"
+author: "Name: ________________"
+output:
+    pdf_document: default
+header-includes:
+    # Sans-serif font
+    - \renewcommand{\familydefault}{\sfdefault} 
+    # Set up page numbering
+    - \usepackage{lastpage}
+    - \usepackage{fancyhdr}
+    - \pagestyle{fancy}
+    - \cfoot{Page \thepage\ of \pageref{LastPage}}
+    - \renewcommand{\headrulewidth}{0pt} 
+---
+\thispagestyle{fancy}
+
+
+## Solutions
+
+1. `getwd()`
+2. functions

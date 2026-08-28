@@ -1,0 +1,31 @@
+## Import the data
+
+```r
+# Import the raw data
+unemp_df <- read_csv(file = "data/unemployment.csv")
+```
+
+\pause
+
+What did we just do? 
+
+\pause 
+
+* We just read our data into R, creating a **data frame** called `unemp_df`
+
+What is `read_csv()`?
+
+\pause 
+
+*  `read_csv()` is a function. Functions take **arguments** telling them what to **function** on!
+*  In this case, the **input** is the name of our data file (`"data/unemployment.csv"`)
+*  We **assigned** the **output** to the name `unemp_df` using the `<-` operator.
+*  What would happen if we misspelled the function name? 
+
+## Leaving off and Picking up in R
+
+1.  **Save your R script**. 
+    * Choose a name, `day_1.R`, for example.
+    * WARNING: **Do not to include spaces** in the file name. E.g.: '`coffee_and_cats.R`' is preferable to '`coffee and cats.R`'.
+2. Close the script and return to your work space
+

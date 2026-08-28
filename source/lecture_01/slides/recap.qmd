@@ -1,0 +1,27 @@
+
+## Topics covered
+
+* Downloading data
+* Reading data into R
+* Functions 
+* Data types
+* Summarizing data 
+* Visualization
+
+
+## Functions Covered
+
+```r
+head()
+glimpse()
+read_csv()
+setwd()
+getwd()
+install.packages()
+library()
+filter()
+mutate()
+ggplot()
+geom_line()
+summary()
+```

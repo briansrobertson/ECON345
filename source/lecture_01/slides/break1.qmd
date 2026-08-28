@@ -1,0 +1,24 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+## Break
+
+We will break here for 10 minutes.
+
+When we come back, we'll have class introductions. 
+
+
+
+## After the break: Class introductions
+
+In alphabetical order (referencing the participants tab), everyone please introduce yourselves.
+
+Students, please feel free to share:
+
+* Your Spelman intro (name, year, major/degree, where you're from)
+* What you are hoping to learn in this course
+
+Staff introductions 
+<!-- are available in [Canvas]() -->

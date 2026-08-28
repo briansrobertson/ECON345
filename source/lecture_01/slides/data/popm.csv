@@ -1,0 +1,25 @@
+Year,Black,White,Source,Black_M,White_M,Black_ML,White_ML,Black_G,White_G
+1790,757208,3172006,Census https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf,0.757208,3.172006,NA,NA,NA,NA
+1800,1002037,4306446,Census https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf,1.002037,4.306446,0.757208,3.172006,32.33312379161341,35.7641189833815
+1810,1377808,5862073,Census https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf,1.377808,5.862073,1.002037,4.306446,37.5007110515879,36.12322086472231
+1820,1771656,7866797,Census https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf,1.771656,7.866797,1.377808,5.862073,28.585114907156875,34.198209404761776
+1830,2328642,10532060,Census https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf,2.328642,10.53206,1.771656,7.866797,31.43872173830586,33.8799005491053
+1840,2873648,14189705,Census https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf,2.873648,14.189705,2.328642,10.53206,23.404456331200777,34.72867606147326
+1850,3638808,19553068,Census https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf,3.638808,19.553068,2.873648,14.189705,26.626782403411966,37.79756520660577
+1860,4441830,26922537,Census https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf,4.44183,26.922537,3.638808,19.553068,22.0682707084298,37.68957894484896
+1870,4880009,33589377,Census https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf,4.880009,33.589377,4.44183,26.922537,9.8648304865337,24.763045176611705
+1880,6580793,43402970,Census https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf,6.580793,43.40297,4.880009,33.589377,34.852066871188136,29.21635908876787
+1890,7488676,55101258,Census https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf,7.488676,55.101258,6.580793,43.40297,13.795951338995163,26.95273618372198
+1900,8833994,66809196,Census https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf,8.833994,66.809196,7.488676,55.101258,17.964697631463835,21.24804119717194
+1910,9827763,81731957,Census https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf,9.827763,81.731957,8.833994,66.809196,11.24937372608583,22.336387643401657
+1920,10463131,94820915,Census https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf,10.463131,94.820915,9.827763,81.731957,6.465031767656602,16.014492348445792
+1930,11891143,110286740,Census https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf,11.891143,110.28674,10.463131,94.820915,13.648037093294528,16.310562917474478
+1940,12865518,118214870,Census https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf,12.865518,118.21487,11.891143,110.28674,8.194123979503066,7.188652053728318
+1950,15042286,134942028,Census https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf,15.042286,134.942028,12.865518,118.21487,16.91939648290882,14.149791815530472
+1960,18871831,158831732,Census https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf,18.871831,158.831732,15.042286,134.942028,25.458530704708043,17.70367939038236
+1970,22580289,177748975,Census https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf,22.580289,177.748975,18.871831,158.831732,19.65075884793585,11.910241588248885
+1980,26495025,188371622,Census https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf,26.495025,188.371622,22.580289,177.748975,17.336961453416286,5.9762071764408216
+1990,29986060,199686070,Census https://www.census.gov/content/dam/Census/library/working-papers/2002/demo/POP-twps0056.pdf,29.98606,199.68607,26.495025,188.371622,13.176190624466292,6.006450377116781
+2000,34658190,211460626,NHGIS Persons: Black or African American (single race);  Persons: White (single race),34.65819,211.460626,29.98606,199.68607,15.581006641085889,5.896533493798535
+2010,38929319,223553265,NHGIS Persons: Black or African American (single race);  Persons: White (single race),38.929319,223.553265,34.65819,211.460626,12.323577774834757,5.718624421361554
+2020,41100000,204300000,https://www.census.gov/content/dam/Census/newsroom/press-kits/2021/redistricting/20210812-presentation-redistricting-jones.pdf,41.1,204.3,38.929319,223.553265,5.575954205620709,-8.612383719826234

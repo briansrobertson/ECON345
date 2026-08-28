@@ -1,0 +1,6 @@
+## Comments in R Code
+
+![](slides/images/comments_in_code_highlighted.png)
+
+* Text to the right of a `#` is considered a comment and ignored
+* Other text is treated as code and executed

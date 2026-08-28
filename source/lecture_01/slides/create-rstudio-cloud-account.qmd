@@ -1,0 +1,24 @@
+---
+fig_caption: yes
+output: pdf_document
+---
+
+```{r }
+exercise_number <- exercise_number + 1
+```
+
+
+## Exercise `r exercise_number`: Create an Posit Cloud Account 
+
+You should have received an e-mail from posit.com with the Subject: Mark Jensen has invited you to access a space on Posit Cloud? It was sent to your university email account.
+There is a link in the e-mail that will take you to create a Posit Cloud account. Once you created your account and log-on you will be taken RStudio. 
+
+If you have already created a Posit Cloud account please log-on to it now.
+If you have not created an account please find this e-mail and do so now.
+<!-- * If yes, *use the link in the follow up email message* to set up an account for this course. -->
+
+<!-- * If no, *use the public site* to set up a free account for today's class. -->
+<!--     1. Go to: https://posit.cloud/ -->
+<!--     2. Click "Get Started for Free" -->
+<!--     3. Select "Free", and click "Sign Up" -->
+<!--     4. Provide name & email, create a password -->

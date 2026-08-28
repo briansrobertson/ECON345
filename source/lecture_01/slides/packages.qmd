@@ -1,0 +1,68 @@
+## Packages 
+
+
+A **package** is a collection of code and functions that other R users publish online. 
+This course focuses on packages in the [tidyverse](https://www.tidyverse.org) 
+
+
+* Access the functions from a package
+```r
+# Load a package in the current R session or program
+library(tidyverse)
+```
+
+* Download a new package, if needed
+```r
+# Install a package on your computer
+install.packages("tidyverse")
+```
+
+
+## Installing vs Loading
+ 
+How do these commands differ?
+
+```{=typst}
+#align(center)[
+```
+
+```{r }
+
+tibble(
+    difference = c("What it does:", 
+                 "When it is used:", 
+                 "Where to type it:"),
+    
+    installing = c("Get a new package", 
+                   "One time per machine or project", 
+                   "The Console prompt"),
+    
+    loading = c("Enable use of new functions", 
+                "In every session or program", 
+                "The Script file")
+) %>%
+    gt() %>%
+   cols_label(
+        difference='',
+        installing='install.packages()',
+        loading='library()'
+    ) %>%
+    tab_style(
+        style=cell_text(
+            size='20pt'
+            ),
+        locations=list(
+            cells_body(),
+            cells_column_labels()
+        )
+    ) %>%
+    opt_row_striping() 
+    
+    
+    #kable(booktabs = TRUE, col.names = c("", "install.packages()", #"library()")) %>%
+    #kable_styling(latex_options = "striped", font_size = 10)
+```
+
+```{=typst}
+]
+```

@@ -1,0 +1,4 @@
+project:
+  type: default
+  output-dir: 'class_materials'
+  post-render: cleanup.py

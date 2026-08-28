@@ -1,0 +1,9 @@
+## Links
+
+* [Canvas](https://canvas.instructure.com/courses/6006441)
+    * [Syllabus](https://canvas.instructure.com/courses/6006441/files/221735849?wrap=1)
+    * [Ask a TA](https://canvas.instructure.com/courses/6006441/discussion_topics) (discussion boards)
+* [Posit Cloud](https://posit.cloud/spaces/162319/)
+* [Rstudio Cheatsheets](https://posit.cloud/learn/cheat-sheets)
+    * [Data import](https://github.com/rstudio/cheatsheets/blob/main/data-import.pdf) with the readr package
+    * [Data Transformation](https://github.com/rstudio/cheatsheets/blob/main/data-transformation.pdf) with the dplyr package

@@ -1,0 +1,63 @@
+```{r }
+exercise_number <- exercise_number + 1
+```
+
+## Exercise `r exercise_number`: Summary Statistics
+
+1. We're going to compute summary statistics
+2. Then we're going to subset our data set
+2. And then we'll combine these steps in a breakout session
+
+## What do our data look like, continued
+
+Now that we have *imported* our data into R, what can we say about it? 
+
+\pause 
+
+* The `summary()` function computes several common summary statistics.
+
+\pause
+
+```{r, echo=TRUE} 
+summary(unemp_df)
+```
+
+* What do we want to learn from our data? 
+  
+## Summarizing data meaningfully 
+
+What if we only want information from specific time periods? 
+
+*  Suppose you only need the unemployment rate data **after** the year 2016.
+*  The `filter` function returns **only** the rows that meet specific conditions
+
+```{r, echo = TRUE} 
+filter(unemp_df, Year > 2016)
+```
+
+* the first argument is the input data: `unemp_df`
+* the second argument is the condition: `Year > 2016`
+
+## Breakout Session 2: Summarizing specific subsets of data 
+
+**Breakout**
+
+*  Use the filter and summary commands to return a summary of unemployment in the 1990s 
+
+Steps: 
+
+1. Identify our desired output ("What do we want")
+2. Find similar working methods ("What do we know that works")
+3. Identify what's different ("How can we adapt what works")
+4. Run and repeat
+
+## Breakout Solution
+
+```{r, echo = TRUE}
+summary(filter(unemp_df, Year >= 1990 & Year <= 1999))
+```
+
+
+## Why summarize data?
+
+![](slides/images/Hangover-Math-meme.jpg){height='450px' fig-align='center'}

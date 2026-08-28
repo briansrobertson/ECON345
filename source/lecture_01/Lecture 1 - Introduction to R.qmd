@@ -1,0 +1,133 @@
+---
+title: "Fall 2026 Exploratory Data Analysis with R"
+subtitle: "Lecture 1: Introduction to R"
+author: "Mark Jensen"
+institute: "Federal Reserve Bank of Atlanta"
+date: "August 28, 2026"
+format:
+  academic-typst: 
+    keep-typ: false
+    extract-media: ''
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(gt)
+exercise_number <- 0
+
+unemp_df <- read_csv("data/unemployment.csv", col_types = cols(.default = col_double()))
+
+```
+
+# Course Logistics
+
+```{r child = "slides/big_picture.qmd"}
+```
+
+```{r child = "slides/course_logistics.qmd"}
+```
+
+# Getting Started
+
+```{r child = "slides/goals_for_today.qmd"}
+```
+
+```{r child = "slides/what-is-rstudio.qmd"}
+```
+
+```{r child = "slides/create-rstudio-cloud-account.qmd"}
+```
+
+```{r child = "slides/rstudio-cloud-interface.qmd"}
+```
+
+```{r child = "slides/rstudio-interface.qmd"}
+```
+
+```{r child = "slides/breakout-session1.qmd"}
+```
+
+# Import Data
+
+```{r child = "slides/directory-setup-exercise1.qmd"}
+```
+
+```{r child = "slides/packages.qmd"}
+```
+
+
+```{r child = "slides/comment-syntax-example.qmd"}
+```
+
+```{r child = "slides/directory-setup-exercise3.qmd"}
+```
+
+```{r child = "slides/break1.qmd"}
+```
+
+```{r child = "slides/after-break1.qmd"}
+```
+
+```{r child = "slides/functions-intro.qmd"}
+```
+
+```{r child = "slides/mini-recap.qmd"}
+```
+
+```{r child = "slides/help.qmd"}
+```
+
+```{r child = "slides/what-is-in-the-data.qmd"}
+```
+
+```{r child = "slides/data-types.qmd"}
+```
+
+# Summarizing Data
+
+```{r child = "slides/summarizing-data.qmd"}
+```
+
+```{r }
+exercise_number <- exercise_number + 1
+```
+
+## Exercise `r exercise_number`: Analyze data
+
+Compare two time periods
+
+1. Compute mean unemployment for the time period 1980 - 1999
+2. Compute mean unemployment for the time period 2000 - 2019
+3. Calculate the difference. Discuss the results: 
+    * Economic significance?
+    * Possible explanations?
+    * Statistical significance? More about this later in the course.
+
+
+```{r child = "slides/break2.qmd"}
+```
+
+
+# Visualizing Data
+
+```{r child = "slides/visualizing-data.qmd"}
+```
+
+```{r child = "slides/example-data.qmd"}
+```
+
+```{r child = "slides/example-plot.qmd"}
+```
+
+```{r child = "slides/du_bois_dataviz.qmd"}
+```
+
+
+# Recap
+
+```{r child = "slides/recap.qmd"}
+```
+
+```{r child = "slides/links.qmd"}
+```

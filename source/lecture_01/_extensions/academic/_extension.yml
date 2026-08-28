@@ -1,0 +1,23 @@
+title: Academic Slides (Typst)
+author: Quarto User
+version: 1.0.0
+quarto-required: ">=1.4.0"
+contributes:
+  formats:
+    typst:
+      toc: false
+      number-sections: false
+      template-partials:
+        - typst-template.typ
+        - typst-show.typ
+      format-resources:
+        - "fonts/Roboto-Variable.ttf"
+        - "fonts/Roboto-Italic-Variable.ttf"
+        - "fonts/NotoSans-Variable.ttf"
+        - "fonts/NotoSans-Italic-Variable.ttf"
+        - "fonts/IBMPlexMono-Regular.ttf"
+        - "fonts/IBMPlexMono-Bold.ttf"
+        - "fonts/IBMPlexMono-Light.ttf"
+        - "fonts/IBMPlexMono-Italic.ttf"
+      font-paths:
+        - fonts

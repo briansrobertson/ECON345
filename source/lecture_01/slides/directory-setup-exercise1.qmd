@@ -1,0 +1,45 @@
+
+```{r}
+exercise_number <- 1
+```
+
+## Exercise `r exercise_number`: Import Data
+
+1. We're going to find some data
+2. Upload it to RStudio
+2. Then tell R where it lives
+3. Then read that data into R!
+
+
+## Directory Structure for Course Materials
+
+* First, create a directory on your computer's hard drive 
+* You will need a organized place to store files on your computer
+
+![](slides/images/directory_fig.png){height=350px}
+
+
+## Download the data from Canvas
+
+
+1. Go to [Canvas](https://canvas.instructure.com/courses/6006441) and navigate to the **Module 1** page.
+2. Click on `unemployment.csv` to download it.
+3. Where should we save it? 
+    * in the directory we just created
+
+
+## What is a CSV file? 
+
+* A delimited text file that uses a comma to separate values.
+* A file that stores tabular data in plain text. 
+    * Each line of the file is a single observation in the data.
+    * Each observation consists of one or more variables, separated by commas.
+*  One of the simplest ways to save data and make it portable. 
+    * R, and all other common statistics/data software, can read in .csv files.
+
+
+## Upload the data to RStudio Cloud
+
+![](slides/images/rstudio-cloud-upload-file.png){height=450px}
+
+

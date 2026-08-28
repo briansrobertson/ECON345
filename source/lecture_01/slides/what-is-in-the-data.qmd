@@ -1,0 +1,27 @@
+## What is in the data?
+ 
+  * Now that we've set our working directory and imported our data, what is in it?  
+  
+  \pause 
+  
+  *  **What:** This is the unemployment rate in the United States  
+  *  **When:** `r min(unemp_df$Year)` - `r max(unemp_df$Year)` 
+  *  How does R interpret the data? How will that affect what we can do with it? 
+
+
+## What do our data look like? 
+
+*  What if we want to look at the data? 
+*  Type `View(unemp_df)` into your script (Note the capital V).
+
+```{r, echo = TRUE, eval = FALSE} 
+# glimpse is another useful function
+glimpse(unemp_df)
+```
+
+\tiny
+```{r } 
+# glimpse is another useful function
+glimpse(unemp_df)
+```
+

@@ -1,0 +1,19 @@
+## Functions are shortcuts for code
+
+* Functions convert one or more inputs into a single output
+
+* A function is essentially a named shortcut for stored code
+
+![](slides/images/partsofafunction.png){height=350px}
+
+## Functions come from three sources:  
+
+* **base R**  -- functions included with R by default
+* **user-defined** -- functions we create ourselves
+* **packages** -- collection of code and functions that other R users publish online
+
+**Sum function example**
+```{r, echo = TRUE, include = TRUE}
+# This function will print out the sum value of the numbers within the parenthesis
+sum(5, 7, 10)
+```

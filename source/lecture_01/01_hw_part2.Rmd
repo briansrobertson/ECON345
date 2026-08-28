@@ -1,0 +1,205 @@
+---
+title: "Homework 1"
+subtitle: "Econ 345"
+date: "Due: September 12th, 9:00AM"
+output: pdf_document
+urlcolor: "blue"
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+```
+
+
+```{r echo = FALSE, message = FALSE}
+# Import the raw data 
+decade_pop <- read_csv("hw/data/decade_pop.csv")
+```
+
+## Part 1: Picking up where we left off from HW1
+
+Last week we worked with the file `decade_pop.csv`.  This week we will continue where we left off by doing data transformations and plotting.  Before answering the following questions, make sure `tidyverse` is installed and `decade_pop.csv` is loaded.
+
+#### Question 1 (3 pts)
+
+**Transform the data.** The original data set contains the total population measured at each decennial census for two racial categories: Black and White (see the footnote above for more details about how the racial groups are measured). Write R code to modify the data set. Use an R function to create six new variables in `decade_pop`. The final data frame should have 10 variables. Include comments in the code to provide context and clarify each step. The new variables to create are:
+
+
+1. Total Black population in millions. Call the new variable `Black_M` 
+2. `Black_M` lagged by 1 year. Call the new variable `Black_ML`
+    * Use the `lag()` function (from the `dplyr` package) to compute this value. Refer to the the built-in R help for the tidyverse function, [RStudio reference cheatsheets](https://posit.co/resources/cheatsheets/), or Google searches if necessary.
+3. Percent change (growth) in the Black population. Call the new variable `Black_G`.  Hints:
+    * The formula for computing the percent change is $\textrm{percent change} = 100 \times ((\textrm{current value} - \textrm{prior value}) / \textrm{prior value})$. Note that the prior value is the lagged value computed earlier, `Black_ML`.
+
+Do the same thing for the white population data.
+
+4. Total white population in millions. Call the new variable `White_M` 
+5. `White_M` lagged by 1 decade. Call the new variable `White_ML`
+    * Use the `lag()` function as described in item #2 above.
+6. Percent change (growth) in the Black population. Call the new variable `White_G`.
+
+You should expect the newly computed variables to look like the example data below. Only the first 6 rows of data for the new variables are shown, along with the year.
+
+```{r,  message = FALSE, warning = FALSE}
+decade_pop <- decade_pop %>%
+    mutate(
+        # Millions
+        Black_M = Black/1000000,
+        White_M = White/1000000,
+        
+        # lagged values
+        Black_ML = lag(Black_M), 
+        White_ML = lag(White_M), 
+        
+        # Growth / percent change
+        Black_G = 100 * (Black_M - Black_ML) / Black_ML,
+        White_G = 100 * (White_M - White_ML) / White_ML
+    )
+```
+
+```{r}
+decade_pop %>%
+    select(Year, Black_M, White_M, Black_ML, White_ML, Black_G, White_G) %>%
+    head() %>%
+    kable(booktabs = TRUE) %>%
+    kable_styling(latex_options = c("striped", "HOLD_position"))
+```
+
+
+#### Question 2 (1pt)
+
+**Save the data.** Save the updated data frame as a CSV file in order to be able to share it more easily with other collaborators. Find an R function that will output your `decade_pop` data frame as a CSV file (See lecture slide 10). Use the built-in R documentation, [RStudio cheatsheets for the tidyverse](https://posit.co/resources/cheatsheets/), or Google searches if necessary. Name the new output file `popm.csv`. 
+
+```r
+write_csv(decade_pop, "data/popm.csv")
+```
+
+#### Question 3 (4 pts)
+
+**Visualize the data.** Use functions from the `ggplot2` package to create four line charts plotting the following variables from `decade_pop`: `Black_M`, `Black_G`, `White_M`, and `White_G`. Plot time on the X-axis and the computed measure on the Y-axis.  The final plots should look like this:  
+
+```{r, warnings = FALSE, fig.height = 3.5}
+ggplot(decade_pop) + 
+    geom_line(mapping = aes(x = Year, y = Black_M))
+```
+
+```{r, warnings = FALSE, fig.height = 3.5}
+ggplot(decade_pop) + 
+    geom_line(mapping = aes(x = Year, y = White_M))
+```
+
+```{r, warnings = FALSE, fig.height = 3.5}
+decade_pop %>%
+    filter(!is.na(Black_G)) %>%
+    ggplot() + 
+    geom_line(mapping = aes(x = Year, y = Black_G))
+```
+
+```{r, warnings = FALSE, fig.height = 3.5}
+decade_pop %>%
+    filter(!is.na(White_G)) %>%
+    ggplot() + 
+    geom_line(mapping = aes(x = Year, y = White_G))
+```
+
+#### Question 4 (2 pts)
+
+**Describe the data based on these outputs.** Explain what is in the plots and describe at least 3 key features of the data. Write your descriptions in the R script as a comment in the code. For example: when do the plots start and end, when are the series at their highest or lowest values, what is the overall trend or typical range, how stable is the trend, what and when are the notable changes for each series, etc.   
+
+#### Question 5 (2 pts)
+
+**Compare your output** to the original Du Bois chart shown at the beginning of part III of this assignment. The original Du Bois image contains all of the same information in the four plots you created for question #3, but ending of course in 1890.  Du Bois displays a line graph for the population (in millions) for White and Black Americans together on the same chart.  The decade growth rates are displayed in small numbers above each line. Click here [https://cdn.loc.gov/master/pnp/ppmsca/33900/33902u.tif](https://cdn.loc.gov/master/pnp/ppmsca/33900/33902u.tif) to view a larger version of the plot. 
+
+Explain how the reader's interpretation of the information might be different looking at your output -- 4 separate plots -- versus Du Bois' strategy of including all four variables on the same chart. Consider where the reader's attention will be drawn.  For example, note the differences in the vertical axes between your charts and the Du Bois chart.   
+
+
+#### Question 6 (4 pts)
+
+**Explore the data further.** There are noticeable changes in both growth rate charts after 1960. Compare the population growth (percent change) before and after 1970. Create two new data frames, each with different subsets of rows from your annual_pop. 
+
+1. Use an R function to filter the rows from 1950 to 1970. Call the data frame `pop_growth_1950_1970`.
+2. Use an R function to filter the rows from 1980 to 2020. Call the data frame `pop_growth_1980_2020`.
+
+
+```{r }
+pop_growth_1950_1970 <- filter(decade_pop, 1950 <= Year & Year <= 1970)
+pop_growth_1980_2020 <- filter(decade_pop, 1980 <= Year & Year <= 2020)
+```
+
+
+### Question 7 (2 pts)
+
+**Compute summary statistics.** Use an R function to compute summary statistics for each of the data frames you created in Question 6. Your results do not need to be formatted this way, but they should be consistent with the numbers shown in the tables below. 
+
+```{r message = FALSE, eval = TRUE}
+# preview the resulting summary values in a table that will display nicely
+decade_pop_stats <- decade_pop %>%
+    filter(1950 <= Year & Year <= 2020) %>%
+    mutate(
+        date_range = case_when(
+            1950 <= Year & Year <= 1970 ~ "1950 - 1970",
+            1980 <= Year & Year <= 2020 ~ "1980 - 2020"
+        )
+    ) %>%
+    select(date_range, Black_M, Black_ML, Black_G, White_M, White_ML, White_G) %>%
+    pivot_longer(cols = -date_range, names_to = "variable") %>%
+    group_by(date_range, variable) %>%
+    summarize(
+        min    = min(value),
+        q25    = quantile(value, 0.25),
+        mean   = mean(value),
+        median = median(value),
+        q75    = quantile(value, 0.75),
+        max    = max(value)
+    ) %>%
+    ungroup() %>%
+    pivot_longer(
+        cols = all_of(c("min", "q25", "mean", "median", "q75", "max")), 
+        names_to = "statistic"
+    )
+
+longname <- c(
+    "min"    = "Minimum", 
+    "q25"    = "25th Percentile", 
+    "mean"   = "Mean",
+    "median" = "Median", 
+    "q75"    = "75th Percentile", 
+    "max"    = "Maximum"
+)
+```
+
+
+```{r }
+decade_pop_stats %>%
+    filter(date_range == "1950 - 1970") %>% 
+    select(-date_range) %>%
+    pivot_wider(names_from = "variable") %>%
+    mutate(statistic = longname[statistic]) %>%
+    rename("Summary Statistic" = statistic) %>%
+    kable(digits = 2, booktabs = TRUE) %>%
+    kable_styling(latex_options = c("striped", "hold_position")) %>%
+    add_header_above(c(" " = 1,"Time Period: 1950 - 1970" = 6))
+
+decade_pop_stats %>%
+    filter(date_range == "1980 - 2020") %>%
+    select(-date_range) %>%
+    pivot_wider(names_from = "variable") %>%
+    mutate(statistic = longname[statistic]) %>%
+    rename("Summary Statistic" = statistic) %>%
+    kable(digits = 2, booktabs = TRUE) %>%
+    kable_styling(latex_options = c("striped", "hold_position")) %>%
+    add_header_above(c(" " = 1,"Time Period: 1980 - 2020" = 6))
+```
+
+
+#### Question 8 (2 pts)
+
+**Analyze and interpret your results** Tell us the main takeaways. 
+
+1. First, **describe** the results: How does mean population growth (percent change) compare before and after 1970?
+
+2. Now, **interpret** your results and tell us what you think the results mean. Name at least 1 factor that might account for the differences. Which do you think might be most significant contributors? Write your responses in the R script as a comments in the code.
+
