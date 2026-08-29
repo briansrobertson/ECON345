@@ -1,8 +1,0 @@
-
-## Mini Recap
-
-Some functions we have used 
-
-*  `library()` - Loads a package into your session
-*  `setwd()` - Tells R where it should start looking for data files
-*  `read_csv()` - imports data from a csv file into a data frame your environment

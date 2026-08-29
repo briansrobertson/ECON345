@@ -1,7 +1,0 @@
-
-## Goals For Today
-
-* Describe the steps of the data analysis process
-* Understand how data are represented and stored
-* Write and run R code using RStudio in your posit.cloud accounts
-* Complete tasks in the data analysis process
