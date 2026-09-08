@@ -1,0 +1,87 @@
+---
+title: "ECON345 Homework 4"
+author: "Firstname Lastname"
+date: "DATE"
+output: pdf_document
+---
+
+<!--
+This is your R Markdown submission template. Knit it to PDF with the Knit
+button in RStudio (arrow next to Knit, then "Knit to PDF").
+
+Remember: in the markdown text, # is a section heading, not a comment. Inside
+an R code chunk, # is an R comment, just like in a script. Lines wrapped in
+this style of bracket are a markdown comment and will not appear in the PDF.
+
+Develop your code in a plain R script first, then move the working code into
+the chunks below. Insert a new chunk with Ctrl+Alt+I (Cmd+Option+I on a Mac).
+-->
+
+```{r setup, include = FALSE}
+# include = FALSE runs this chunk but hides the code and any package messages.
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(AER)
+library(knitr)
+
+data("CPS1985")
+```
+
+## Question 1
+
+```{r question-1}
+
+```
+
+## Question 2
+
+```{r question-2}
+
+```
+
+## Question 3
+
+```{r question-3}
+
+```
+
+## Question 4
+
+```{r question-4}
+
+```
+
+## Question 5
+
+```{r question-5}
+
+```
+
+## Question 6
+
+```{r question-6}
+
+```
+
+## Question 7
+
+<!-- Answer in one or two sentences of markdown text below. -->
+
+
+## Question 8
+
+<!-- Part III assembles this document. Confirm the YAML above outputs to PDF
+     and that your setup chunk uses include = FALSE. -->
+
+
+## Question 9
+
+```{r question-9}
+# Present your summary table with kable(): round to 2 digits and add a caption.
+
+```
+
+## Question 10
+
+<!-- Answer in one or two sentences of markdown text (not a code comment). -->
