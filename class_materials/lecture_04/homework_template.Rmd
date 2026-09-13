@@ -7,14 +7,15 @@ output: pdf_document
 
 <!--
 This is your R Markdown submission template. Knit it to PDF with the Knit
-button in RStudio (arrow next to Knit, then "Knit to PDF").
+button in RStudio (arrow next to Knit, then "Knit to PDF"). Starting this
+week, the .Rmd and its knitted PDF are the whole submission — no separate
+.R script.
 
 Remember: in the markdown text, # is a section heading, not a comment. Inside
 an R code chunk, # is an R comment, just like in a script. Lines wrapped in
 this style of bracket are a markdown comment and will not appear in the PDF.
 
-Develop your code in a plain R script first, then move the working code into
-the chunks below. Insert a new chunk with Ctrl+Alt+I (Cmd+Option+I on a Mac).
+Insert a new chunk with Ctrl+Alt+I (Cmd+Option+I on a Mac).
 -->
 
 ```{r setup, include = FALSE}
@@ -25,63 +26,88 @@ library(tidyverse)
 library(AER)
 library(knitr)
 
+data("CASchools")
 data("CPS1985")
 ```
 
-## Question 1
+## Part I: Start Your R Markdown Document
 
-```{r question-1}
+### Question 1
 
-```
+<!-- The setup chunk above is Question 1 -- confirm the YAML header outputs
+     to PDF and that this chunk uses include = FALSE. -->
 
-## Question 2
+### Question 2
 
-```{r question-2}
-
-```
-
-## Question 3
-
-```{r question-3}
+```{r question-2-transform}
+# Move last week's mutate()/case_when() step here: build str_level from
+# stu_teach_ratio.
 
 ```
 
-## Question 4
+```{r question-2-summary}
+# Move last week's group_by()/summarize() step here: mean read and math
+# scores by str_level.
+
+```
+
+### Question 3
+
+<!-- Answer in one or two sentences of markdown text below: which str_level
+     group has the highest average math score, and which has the least
+     variation in reading scores? -->
+
+
+## Part II: Clean Up This Code
+
+### Question 4
 
 ```{r question-4}
 
 ```
 
-## Question 5
+### Question 5
 
 ```{r question-5}
 
 ```
 
-## Question 6
+### Question 6
 
 ```{r question-6}
 
 ```
 
-## Question 7
+### Question 7
 
-<!-- Answer in one or two sentences of markdown text below. -->
-
-
-## Question 8
-
-<!-- Part III assembles this document. Confirm the YAML above outputs to PDF
-     and that your setup chunk uses include = FALSE. -->
-
-
-## Question 9
-
-```{r question-9}
-# Present your summary table with kable(): round to 2 digits and add a caption.
+```{r question-7}
 
 ```
 
-## Question 10
+## Part III: Conditional Summary Statistics
 
-<!-- Answer in one or two sentences of markdown text (not a code comment). -->
+### Question 8
+
+```{r question-8}
+
+```
+
+### Question 9
+
+```{r question-9}
+
+```
+
+### Question 10
+
+```{r question-10}
+# Present your Question 9 summary table with kable(): round to 2 digits and
+# add a caption.
+
+```
+
+### Question 11
+
+<!-- Answer in one or two sentences of markdown text (not a code comment):
+     which experience group earns the most on average, and does the pattern
+     match what you'd expect? -->

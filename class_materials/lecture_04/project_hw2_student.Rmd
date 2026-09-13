@@ -1,0 +1,57 @@
+---
+title: "Project Update 2"
+subtitle: "ECON 345"
+author: "Your Name"
+date: "Due: 11:59PM September 26, 2026"
+output: pdf_document
+urlcolor: blue
+---
+  
+# Part A - Data Transformations (20 points)
+  
+In last week's update, you loaded your data into R and identified variables of interest. 
+
+1. List the variables that need to be transformed and the accompanying transformations (ie, if you have a continuous variable for income and you need to transform it into categorical variables of "low", "middle", or "high" income) (10 points)
+
+2. Do the appropriate transformations and assign them to a new column in the dataframe. Provide the code below that does this. (10 points)
+
+```{r, echo = TRUE, eval = TRUE}
+# Load in your data
+
+# Perform appropriate transformations and assign them a new column in the dataframe 
+
+
+```
+
+
+# Part B - Compute summary statistics (60 points)
+
+The previous two exercises are aimed at developing your conceptual understanding of your research question, establishing how the data available to you may lend some insights into your research, and anticipating what you may find. Finally, you're ready to start digging into your data. To this end:
+
+ 3. **Compute summary statistics for your key (i.e., dependent and independent) variables. (30 point)** 
+    
+    - If your variables are continuous, consider mean, median, sd, min, max, P25, P75, and N.
+    - If your variables are categorical, consider frequency counts and sample shares/proportions.
+    
+```{r, echo = TRUE, eval = TRUE}
+# Compute summary statistics 
+
+```
+    
+    
+ 4. **Provide an interpretation of the summary statistics for each of your key variables (30 points)** Consider:
+
+    - How do these summary statistics compare to your expectations discussed above?
+    - Was there anything that surprised you?
+    - Do these summary statistics reveal any data transformation needs? 
+  
+# Part C - Follow-up With Your Adviser (20 points)
+
+5. Email your adviser with the knitted output (i.e., the PDF or Word document that results from your RMD) and suggest some meeting times for next week. Do not send them your R script file or your RMD, but do submit these on canvas. In your email, consider and **propose solutions** to the following questions with your adviser.
+
+  - What have you learned about your variables? (5 points)
+  - Does this new information suggest that you need to transform these variable to better execute your analysis? How would you do so? (5 points)
+  - What have you learned about the relationship of interest? (5 points)
+  - How does this fit with your expectations? (5 points)
+ 
+ **To receive credit for this, you must cc econ345.spelman@gmail.com.**   
