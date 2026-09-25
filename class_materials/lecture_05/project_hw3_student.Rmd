@@ -1,0 +1,60 @@
+---
+title: "Project Update 3"
+subtitle: "ECON 345"
+author: "Your Name"
+date: "Due: 11:59PM October 3, 2026"
+output: pdf_document
+urlcolor: blue
+---
+
+# Part A - Conditional Summary Statistics (40 points)
+
+1. Compute summary statistics for your dependent variable grouped by the factors of your key independent variable(s). For example, if you're interested in studying the relationship between income and education, you may want to compute median income for different education groups (i.e., people with a college degree vs. without). Contact your adviser if you have questions regarding computing conditional summary statistics for your project. (20 points)
+
+    - If your dependent variable ($Y$) is continuous and your independent variable ($X$) is categorical, compute statistics of $Y$ for each level of $X$. See Lecture 3.
+    - If both your $X$ and $Y$ are continuous, define some categorical variable ($Z$) based on $X$ (e.g., below/above the mean or median) and compute summary statistics of $Y$ for each level of $Z$. See Lecture 3.
+    - If your $Y$ is categorical and $X$ is continuous, define some categorical variable ($Z$) based on $X$ and compute sample shares of $Y$ for each level of $Z$. See Lecture 3.
+
+```{r, echo = TRUE, eval = TRUE}
+# Compute conditional summary statistics
+
+```
+
+2. **Provide an interpretation of the conditional summary statistics (20 points)**
+
+    - Explain your reasoning for how you chose to condition your variables.
+    - Were you surprised by your results?
+    - How do your findings relate to your research question?
+
+# Part B - Data Visualizations (50 points)
+
+## Produce and Interpret Histograms (25 points)
+
+3. Pick 2 variables in your dataset that are key to your analysis. For each, produce a histogram (if your data are numerical, consider grouping into bins first). (10 points)
+
+```{r, echo = TRUE, eval = TRUE}
+# Create histograms and plot them
+
+```
+
+4. Interpret both of your histograms. What do they tell you about the location and spread of the distributions, and how do they compare to your expectations? (15 points)
+
+## Visualizing Relationships (25 points)
+
+5. Create a chart to visualize a key relationship in your data — a conditional histogram, a scatterplot, or another visual of your choosing. (10 points)
+
+```{r, echo = TRUE, eval = TRUE}
+# Create chart and plot it
+
+```
+
+6. Interpret the results — what do they tell you about your relationship of interest? (15 points)
+
+# Part C - Follow-up With Your Adviser (10 points)
+
+Email your adviser with the knitted output (i.e., the PDF or Word document that results from your RMD). Do not send them your R script file or your RMD, but do submit these on Canvas.
+
+  - Email your knitted output to your adviser with econ345.spelman@gmail.com cc'd.
+  - Continue the conversation with your adviser by summarizing your findings and brainstorming next steps in the body of your email.
+
+**To receive credit for this, you must cc econ345.spelman@gmail.com.**
