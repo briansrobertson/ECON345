@@ -1,0 +1,73 @@
+---
+title: "Project Update 4"
+subtitle: "ECON 345"
+author: "Your Name"
+date: "Due: 11:59PM October 10, 2026"
+output: pdf_document
+urlcolor: blue
+---
+
+**If your project has weights, do Parts A, C, and D only. If your project does not have weights, do Parts B, C, and D only.**
+
+# Part A - Incorporating Weights (80 points)
+
+1. For your summary statistics (30 points):
+
+```{r, eval = TRUE, echo = FALSE}
+# compute weighted summary statistics
+
+```
+
+2. Histograms (30 points):
+
+```{r, eval = TRUE, echo = FALSE}
+# compute weighted histograms
+
+```
+
+3. Conditional summary statistics (20 points):
+
+```{r, eval = TRUE, echo = FALSE}
+# compute weighted conditional summary statistics
+
+```
+
+4. Conditional histograms (20 points):
+
+```{r, eval = TRUE, echo = FALSE}
+# compute weighted conditional histograms
+
+```
+
+# Part B - Incorporating Feedback (80 points)
+
+1. State all the feedback from your adviser and buddy that you have received up to this point. (30 points)
+2. Incorporate the feedback you have received from your adviser and buddy. (30 points)
+
+```{r, eval = TRUE, echo = FALSE}
+# reproduce or compute results if necessary
+
+```
+
+3. Take previous visuals, statistics, or charts and polish them. (20 points)
+
+```{r, eval = TRUE, echo = FALSE}
+# polish previous analysis
+
+```
+
+# Part C - Follow-up With Your Adviser (10 points)
+
+1. Email your adviser with the knitted output (i.e., the PDF or Word document that results from your RMD). Do not send them your R script file or your RMD, but do submit these on Canvas. In your email, give your adviser a brief summary of what you've done this week and what you've learned about your research question, and include any questions or ideas about where to take your analysis next.
+
+    - **Email your knitted output to your adviser with econ345.spelman@gmail.com cc'd.**
+    - **Continue the conversation with your adviser by summarizing your findings and brainstorming next steps in the body of your email.**
+
+# Part D - Share With Your Classmates (10 points)
+
+1. Please post on the Canvas discussion board for the project a post that includes:
+
+    - **Your research topic and a brief description of your data** (5 points)
+    - **A description of some of the challenges you've encountered so far** (5 points)
+
+You're strongly encouraged to comment on your classmates' posts as well!

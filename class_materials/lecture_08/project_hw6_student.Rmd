@@ -1,0 +1,141 @@
+---
+title: "Project Update 6"
+subtitle: "ECON 345"
+author: "Your Name"
+date: "Due: 11:59PM October 31, 2026"
+output: pdf_document
+urlcolor: blue
+---
+
+**For Part A, you need to reproduce your work from Project Update 5 with revisions based on feedback you received. If you did not receive any feedback for a particular item, you should still include that item.**
+
+# Part A - Iterating on Previous Work (30 points)
+
+1. **Research Question (10)**
+
+    - What is your research question? (2)
+
+        - Answer:
+
+    - How has your research question changed over the course of the project? (2)
+
+        - Answer:
+
+    - What are the key relationships in your data that could inform the answer to your research question? (2)
+
+        - Answer:
+
+    - Based on your data, what is a testable hypothesis for your research question? (4)
+
+        - Answer:
+
+2. **Summary Statistics (4)**
+
+```{r, eval = TRUE, echo = FALSE}
+# generate summary statistics, incorporating weights if applicable, using vtable or kable
+
+```
+
+    - Feedback incorporated, or struggles/no feedback to report: (2)
+
+        - Answer:
+
+3. **Conditional Summary Statistics (4)**
+
+```{r, eval = TRUE, echo = FALSE}
+# generate conditional summary statistics, incorporating weights if applicable, using vtable or kable
+
+```
+
+    - Feedback incorporated, or struggles/no feedback to report: (2)
+
+        - Answer:
+
+4. **Data Visualization (12)**
+
+```{r, eval = TRUE, echo = FALSE}
+# chart 1
+
+# chart 2
+
+# chart 3
+
+```
+
+    - What story does each chart tell? (5)
+
+        - Answer:
+
+    - Feedback incorporated, or struggles/no feedback to report: (2)
+
+        - Answer:
+
+# Part B - Refining Your Interpretation (30 points)
+
+5. What did you originally expect to find in the data about the relationship between your key variables? (5)
+
+    - Answer:
+
+6. How have your findings differed from your original expectations? (5)
+
+    - Answer:
+
+7. How does your analysis thus far help inform your research question? Tell us a story. (10)
+
+    - Answer:
+
+8. What limitations exist to your analysis and visualizations so far? How could you overcome these limitations? (10)
+
+    - Answer:
+
+# Part C - Analysis With a Simple Regression (20 points)
+
+9. Define your dependent variable and one explanatory variable for a simple regression. Explain your reasoning. (5)
+
+    - Answer:
+
+10. State the null and alternative hypotheses for the slope on your explanatory variable. (5)
+
+    - Answer:
+
+11. Fit the regression with `lm()`, and display the results with `broom::tidy()` and `broom::glance()`. Do not use `summary()` or pull coefficients with `$`. (5)
+
+```{r, eval = TRUE, echo = FALSE}
+# library(broom)
+# my_model <- lm(dependent_var ~ explanatory_var, data = your_data)
+# tidy(my_model)
+# glance(my_model)
+
+```
+
+12. Interpret the results, and visualize the relationship with a scatterplot and the fitted line from `broom::augment()`. (5)
+
+```{r, eval = TRUE, echo = FALSE}
+# augment(my_model) %>%
+#   ggplot(aes(x = explanatory_var, y = dependent_var)) +
+#   geom_point() +
+#   geom_line(aes(y = .fitted))
+
+```
+
+    - Interpretation (coefficient, statistical significance, economic significance):
+
+        - Answer:
+
+# Part D - Follow-up With Your Adviser (10 points)
+
+13. Email your adviser with your knitted output, with `econ345.spelman@gmail.com` cc'd. (5)
+
+    - Summary of what you've done this week and what you've learned: (5)
+
+        - Answer:
+
+# Part E - Share With Your Classmates (10 points)
+
+14. Pick one chart from Part A and share it on the Canvas discussion board.
+
+    - Posting your chart (5)
+
+    - A brief description of your chart (5)
+
+        - Answer:

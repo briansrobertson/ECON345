@@ -1,0 +1,139 @@
+---
+title: "Project Update 5"
+subtitle: "ECON 345"
+author: "Your Name"
+date: "Due: 11:59PM October 17, 2026"
+output: pdf_document
+urlcolor: blue
+---
+
+**For Part A, you need to reproduce your work from Project Update 4 with revisions based on feedback you received. If you did not receive any feedback for a particular item, you should still include that item.**
+
+# Part A - Iterating on Previous Work (30 points)
+
+1. **Research Question (10)**
+
+    - What is your research question? (2)
+
+        - Answer:
+
+    - How has your research question changed over the course of the project? (2)
+
+        - Answer:
+
+    - What are the key relationships in your data that could inform the answer to your research question? (2)
+
+        - Answer:
+
+    - Based on your data, what is a testable hypothesis for your research question? (4)
+
+        - Answer:
+
+2. **Summary Statistics (4)**
+
+```{r, eval = TRUE, echo = FALSE}
+# generate summary statistics, incorporating weights if applicable, using vtable or kable
+
+```
+
+    - Feedback incorporated, or struggles/no feedback to report: (2)
+
+        - Answer:
+
+3. **Conditional Summary Statistics (4)**
+
+```{r, eval = TRUE, echo = FALSE}
+# generate conditional summary statistics, incorporating weights if applicable, using vtable or kable
+
+```
+
+    - Feedback incorporated, or struggles/no feedback to report: (2)
+
+        - Answer:
+
+4. **Data Visualization (12)**
+
+```{r, eval = TRUE, echo = FALSE}
+# chart 1
+
+# chart 2
+
+# chart 3
+
+```
+
+    - What story does each chart tell? (5)
+
+        - Answer:
+
+    - Feedback incorporated, or struggles/no feedback to report: (2)
+
+        - Answer:
+
+# Part B - Refining Your Interpretation (30 points)
+
+5. What did you originally expect to find in the data about the relationship between your key variables? (5)
+
+    - Answer:
+
+6. How have your findings differed from your original expectations? (5)
+
+    - Answer:
+
+7. How does your analysis thus far help inform your research question? Tell us a story. (10)
+
+    - Answer:
+
+8. What limitations exist to your analysis and visualizations so far? How could you overcome these limitations? (10)
+
+    - Answer:
+
+# Part C - Analysis With a T-Test (20 points)
+
+9. Define a grouping variable based on your independent variable that splits your data into two groups. Explain your reasoning. (5)
+
+    - Answer:
+
+10. Based on your summary statistics or histogram, describe the relationship between your dependent and independent variables. (5)
+
+    - Answer:
+
+11. Which test are you using?
+
+    - One-sample or two-sample? One-sided or two-sided? (2)
+
+        - Answer:
+
+    - State your null and alternative hypotheses. (3)
+
+        - Answer:
+
+12. Run the t-test with `infer::t_test()` and interpret the results. (5)
+
+```{r, eval = TRUE, echo = FALSE}
+# library(infer)
+# t_test(your_data, response = your_response, explanatory = your_grouping_variable)
+
+```
+
+    - Interpretation:
+
+        - Answer:
+
+# Part D - Follow-up With Your Adviser (10 points)
+
+13. Email your adviser with your knitted output, with `econ345.spelman@gmail.com` cc'd. (5)
+
+    - Summary of what you've done this week and what you've learned: (5)
+
+        - Answer:
+
+# Part E - Share With Your Classmates (10 points)
+
+14. Pick one chart from Part A and share it on the Canvas discussion board.
+
+    - Posting your chart (5)
+
+    - A brief description of your chart (5)
+
+        - Answer:
