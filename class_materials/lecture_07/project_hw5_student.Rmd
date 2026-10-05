@@ -2,7 +2,7 @@
 title: "Project Update 5"
 subtitle: "ECON 345"
 author: "Your Name"
-date: "Due: 11:59PM October 17, 2026"
+date: "Due: 11:59PM October 24, 2026"
 output: pdf_document
 urlcolor: blue
 ---
